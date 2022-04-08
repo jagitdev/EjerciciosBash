@@ -5,11 +5,11 @@ read -p "Dime un directorio o achivo: " $nombreItem
 if [ -d $nombreItem ]
 then
 	echo "Es un directorio"
-	ls -l
+	ls -l -d
 elif [ -f $nombreItem ]
 then
 	echo "Es un fichero"
-	ls -l
+	ls -l $nombreItem
 
 else
 	echo "ERROR. No me has pasado nada"
